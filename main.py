@@ -51,7 +51,7 @@ def process_response(data: Dict[Any, Any]) -> None:
     """
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     current_total = data.get('current_total', 'error')
-    logging.info(f"Processing data: {current_total}")
+    logging.info(f"Processing data: {data}")
     append_to_file(current_time, current_total)
 
 def main() -> None:
